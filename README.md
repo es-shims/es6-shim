@@ -11,7 +11,7 @@ closely as possible to ECMAScript 6 (Harmony).
 [HTML version of the final ECMAScript 6 spec][spec-html-url]
 
 ## Installation
-If you want to use it in browser:
+If you want to use it in the browser:
 
 * Just include `es6-shim` before your scripts.
 * Include [es5-shim][es5-shim-url] especially if your browser doesn't support ECMAScript 5 - but every JS engine requires the `es5-shim` to correct broken implementations, so it's strongly recommended to always include it. Additionally, `es5-shim` should be loaded before `es6-shim`.
@@ -33,7 +33,7 @@ In both browser and node you may also want to include `unorm`; see the [`String.
 * `Promise`
 * `String`:
     * `fromCodePoint()` ([a standalone shim is also available](https://npmjs.com/string.fromcodepoint))
-    * `raw()` ([a stanadlone shim is also available](https://www.npmjs.com/package/string.raw))
+    * `raw()` ([a standalone shim is also available](https://www.npmjs.com/package/string.raw))
 * `String.prototype`:
     * `codePointAt()` ([a standalone shim is also available](https://npmjs.com/string.prototype.codepointat))
     * `endsWith()` ([a standalone shim is also available](https://npmjs.com/string.prototype.endswith))
@@ -165,10 +165,10 @@ See https://github.com/paulmillr/es6-shim/issues/134 for more discussion.
 
 
 ## WeakMap shim
-It is not possible to implement WeakMap in pure javascript.
+It is not possible to implement WeakMap in pure JavaScript.
 The [es6-collections](https://github.com/WebReflection/es6-collections) implementation doesn't hold values strongly, which is critical for the collection. `es6-shim` decided to not include an incorrect shim.
 
-`WeakMap` has very unusual use-cases, so you probably won't need it at all (use simple `Map` instead).
+`WeakMap` has very unusual use cases, so you probably won't need it at all (use simple `Map` instead).
 
 ## Getting started
 
@@ -246,7 +246,7 @@ Promise.resolve(5).then(function (value) {
 }).catch(function (e) {
   assert.equal(e.message, 'whoops!');
   assert.equal(true, e instanceof Error);
-  // any errors thrown asynchronously end up here
+  //Any errors thrown asynchronously end up here
 });
 ```
 
