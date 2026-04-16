@@ -27,7 +27,7 @@
     "prepublih": "not-in-publish || npm run prepublishOnly",
     "pretest": "npm run lint && evalmd *.md",
     "test": "NODE_OPTIONS='--unhandled-rejections=none' npm run tests-only",
-    "posttest": "aud --production",
+    "posttest": "npx npm@\">= 10.2\" audit --production",
     "tests-only": "nyc mocha 'test/**/*.js' 'test-sham/*.js'",
     "test:shim": "nyc mocha 'test/**/*.js'",
     "test:sham": "nyc mocha 'test-sham/*.js'",
@@ -62,7 +62,6 @@
   },
   "devDependencies": {
     "@ljharb/eslint-config": "^21.0.1",
-    "aud": "^2.0.2",
     "chai": "^3.5.0",
     "es5-shim": "^4.6.7",
     "eslint": "=8.8.0",
