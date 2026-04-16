@@ -1430,7 +1430,7 @@
       NEGATIVE_INFINITY: OrigNumber.NEGATIVE_INFINITY,
       POSITIVE_INFINITY: OrigNumber.POSITIVE_INFINITY
     });
-    Number = NumberShim; // eslint-disable-line no-global-assign
+    Number = NumberShim; // eslint-disable-line no-global-assign, no-implicit-globals
     Value.redefine(globals, 'Number', NumberShim);
   }
 
@@ -1834,7 +1834,7 @@
     wrapConstructor(OrigRegExp, RegExpShim, {
       $input: true // Chrome < v39 & Opera < 26 have a nonstandard "$input" property
     });
-    RegExp = RegExpShim; // eslint-disable-line no-global-assign
+    RegExp = RegExpShim; // eslint-disable-line no-global-assign, no-implicit-globals
     Value.redefine(globals, 'RegExp', RegExpShim);
   }
 
@@ -2693,7 +2693,7 @@
       || !getsThenSynchronously
       || hasBadResolverPromise
     ) {
-      Promise = PromiseShim; // eslint-disable-line no-global-assign
+      Promise = PromiseShim; // eslint-disable-line no-global-assign, no-implicit-globals
       overrideNative(globals, 'Promise', PromiseShim);
     }
     if (Promise.all.length !== 1) {
